@@ -1,12 +1,15 @@
-
+const messages = [];
 module.exports = {
   Query: {
-    messages: ()=>{
-      return [{
-        id: 111,
-        user: 'ben',
-        content: 'hello'
-      }]
-    }
-  }
+    messages: () => {
+      return messages;
+    },
+  },
+  Mutation: {
+    postMessage: (parent, { user, content }) => {
+      const id = messages.length;
+      messages.push({ id, user, content });
+      return id;
+    },
+  },
 };

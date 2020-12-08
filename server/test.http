@@ -1,7 +1,16 @@
-### 
+###  Get messages
 POST http://localhost:8964 HTTP/1.1
 content-type: application/json
 
 {
-  "query":"{ messages {id}}"
+  "query":"{ messages {id user content}}"
+}
+
+
+### Post messages
+POST http://localhost:8964 HTTP/1.1
+content-type: application/json
+
+{
+  "query":"mutation { postMessage(user:\"ben\", content:\"hello\")}"
 }

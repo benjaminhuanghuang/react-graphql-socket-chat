@@ -10,4 +10,8 @@ module.exports = gql`
   type Query {
     messages: [Message!]
   }
+
+  type Mutation {
+    postMessage(user: String!, content: String!): ID!
+  }
 `;
