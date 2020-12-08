@@ -1,0 +1,39 @@
+{
+  "name": "wp5-starter-react",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "build:start": "cd dist && PORT=8080 npx serve",
+    "start": "webpack serve",
+    "start:live": "webpack-dev-server --open --mode development --liveReload",
+    "docker:build": "docker build . -t wp5-starter",
+    "docker:run": "docker run -p 8080:8080 wp5-starter"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jack Herrington",
+    "email": "jherr@pobox.com"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.9",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "7.12.7",
+    "babel-loader": "8.2.2",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "next",
+    "style-loader": "2.0.0",
+    "webpack": "5.10.0",
+    "webpack-cli": "4.2.0",
+    "webpack-dev-server": "3.11.0"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.4",
+    "bootstrap": "^4.5.3",
+    "graphql": "^15.4.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "shards-ui": "^3.0.0"
+  }
+}
