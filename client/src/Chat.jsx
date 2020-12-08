@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 //
 import { ApolloClient, InMemoryCache, ApolloProvider, useMutation, gql } from "@apollo/client";
 
@@ -26,6 +26,7 @@ const Chat = () => {
   const [postMessage] = useMutation(POST_MESSAGE);
 
   const onSend = () => {
+    debugger;
     if (state.content.length > 0) {
       postMessage({
         variables: state,
@@ -71,7 +72,7 @@ const Chat = () => {
           />
         </Col>
         <Col xs={2} style={{ padding: 0 }}>
-          <Button onClick={() => onSend()} style={{ width: "100%" }}>
+          <Button onClick={onSend} style={{ width: "100%" }}>
             Send
           </Button>
         </Col>
