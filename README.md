@@ -12,6 +12,6 @@ npx degit https://github.com/jherr/wp5-starter-react.git\#main client
 
 Setup Client
 ```
-  npm i bootstrap shards-ui
+  npm i bootstrap bootstrap-react shards-ui shards-react
   npm i graphql @apollo/client
 ```
